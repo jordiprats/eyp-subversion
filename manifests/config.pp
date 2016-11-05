@@ -3,7 +3,7 @@
 # === subversion::config documentation
 #
 class subversion::config inherits subversion {
-  
+
   Exec {
     path => '/usr/sbin:/usr/bin:/sbin:/bin',
   }
@@ -24,12 +24,12 @@ class subversion::config inherits subversion {
     creates => $subversion::datadir,
   }
 
-  # file { $datadir:
-  #   ensure  => 'directory',
-  #   owner   => $subversion::svnserve_user,
-  #   group   => $subversion::svnserve_user,
-  #   mode    => '0755',
-  #   require => Exec["mkdir p subversion ${subversion::datadir}"],
-  # }
+  file { $datadir:
+    ensure  => 'directory',
+    owner   => $subversion::svnserve_user,
+    group   => $subversion::svnserve_user,
+    mode    => '0755',
+    require => Exec["mkdir p subversion ${subversion::datadir}"],
+  }
 
 }
