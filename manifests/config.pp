@@ -7,11 +7,11 @@ class subversion::config inherits subversion {
   if($subversion::params::sysconfig_file!=undef)
   {
     file { $subversion::params::sysconfig_file:
-      ensure => 'present',
-      owner => 'root',
-      group => 'root',
-      mode => '0640',
-      content => template("${module_name}/sysconfig/${subversion::params::sysconfig_template}")
+      ensure  => 'present',
+      owner   => 'root',
+      group   => 'root',
+      mode    => '0640',
+      content => template("${module_name}/sysconfig/${subversion::params::sysconfig_template}"),
     }
   }
 
