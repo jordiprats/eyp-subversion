@@ -26,6 +26,6 @@ class subversion::config inherits subversion {
     group   => $subversion::svnserve_user,
     mode    => '0755',
     require => Exec["mkdir p subversion ${subversion::datadir}"],
-  }aa
+  }
 
 }
