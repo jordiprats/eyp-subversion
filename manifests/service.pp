@@ -15,7 +15,10 @@ class subversion::service inherits subversion {
   {
     if($subversion::manage_service)
     {
-      #service or exec here
+      service { $subversion::params::service_name:
+        ensure  => $crond::service_ensure,
+        enable  => $crond::service_enable,
+      }
     }
   }
 }

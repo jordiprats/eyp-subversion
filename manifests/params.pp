@@ -1,5 +1,8 @@
 class subversion::params {
 
+  $package_name='subversion'
+  $service_name='svnserve'
+
   case $::osfamily
   {
     'redhat':
@@ -8,6 +11,8 @@ class subversion::params {
       {
         /^[5-7].*$/:
         {
+          $sysconfig_file='/etc/sysconfig/svnserve'
+          $sysconfig_template='RH/svnserve.erb'
         }
         default: { fail("Unsupported RHEL/CentOS version! - ${::operatingsystemrelease}")  }
       }
