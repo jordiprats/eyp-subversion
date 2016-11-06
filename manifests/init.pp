@@ -7,7 +7,7 @@ class subversion(
                   $svnserve_user_uid     = '556',
                   $svnserve_user_home    = undef,
                   $svnserve_user         = 'svnserve',
-                  $datadir               = '/var/subversion',
+                  $datadir               = '/var/svn',
                   $manage_package        = true,
                   $package_ensure        = 'installed',
                   $manage_service        = true,
