@@ -2,7 +2,7 @@
   "name": "eyp-subversion",
   "version": "0.1.1",
   "author": "eyp",
-  "summary": null,
+  "summary": "subversion server using svnserve",
   "license": "Apache-2.0",
   "source": "https://github.com/NTTCom-MS/eyp-subversion",
   "project_page": null,
